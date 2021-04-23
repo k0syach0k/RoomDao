@@ -1,35 +1,25 @@
 <resources>
-    <string name="app_name">Content Provider</string>
+    <string name="app_name">RoomDao</string>
 
-    //PermissionMessage
-    <string name="contactPermissionDeniedToast">Приложение не может работать без доступа к списку контактов</string>
-    <string name="contactPermissionNeverAskAgain">Предоставьте разрешения на доступ к списку контактов в настройках телефона</string>
+    <string name="fabAddDescription">добавить</string>
+    <string name="fabDeleteDescription">удалить</string>
 
-    //ListFragment
-    <string name="fabAddContactDescription">Add contact</string>
+    //Add User Fragment
+    <string name="firstNameEditTextHint">введите имя</string>
+    <string name="lastNameEditTextHint">введите фамилию</string>
+    <string name="passwordEditTextHint">введите пароль</string>
+    <string name="submitButtonText">сохранить</string>
+    <string name="deleteButtonText">удалить</string>
+    <string name="toastUserSaved">пользователь %1$s %2$s сохранён</string>
+    <string name="toastUserDeleted">пользователь %1$s %2$s удалён</string>
+    <string name="addUserFragmentTitle">Добавление пользователя</string>
+    <string name="editUserFragmentTitle">Редактирование пользователя</string>
 
-    //AddFragment
-    <string name="inputPrefixNameHint">введите префикс</string>
-    <string name="inputNameHint">введите имя</string>
-    <string name="inputMiddleNameHint">введите отчество</string>
-    <string name="inputLastNameHint">введите фамилию</string>
-    <string name="inputSuffixNameHint">введите суффикс</string>
-    <string name="inputPhoneNumberHint">введите номер телефона</string>
-    <string name="inputEmailHint">введите email</string>
-    <string name="saveButtonText">сохранить</string>
-    <string name="deleteContactFabDescription">delete contact</string>
-    <string name="incorrectPhoneNumber">Введите корректный номер телефона</string>
-    <string name="incorrectName">Введите имя контакта</string>
-    <string name="incorrectLastName">Введите фамилию контакта</string>
-    <string name="errorSaveContact">Невозможно сохранить контакт</string>
-    <string name="contactSuccessfulAdded">Контакт успешно сохранён</string>
-    
-    //AlertDialog
-    <string name="alertDialogTitle">Подтвердите удаление</string>
-    <string name="alertDialogText">Удаление необратимо, подтверждаете удаление контакта?</string>
-    <string name="alertDialogOk">Подтверждаю</string>
-    <string name="alertDialogCancel">Отмена</string>
+    //Add Email Address Fragment
+    <string name="emailAddressEditTextHint">введите email адрес</string>
+    <string name="toastEmailAddressSaved">email адрес %1$s сохранён</string>
+    <string name="toastEmailAddressDeleted">email адрес %1$s удалён</string>
+    <string name="addEmailAddressFragmentTitle">Добавление email адреса</string>
+    <string name="editEmailAddressFragmentTitle">Редактирование email адреса</string>
 
-    //DetailFragment
-    <string name="contactSuccessfulDeleted">Контакт успешно удалён</string>
 </resources>

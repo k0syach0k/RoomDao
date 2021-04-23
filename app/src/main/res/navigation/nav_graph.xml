@@ -2,37 +2,51 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/listFragment">
-
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userListFragment">
 
     <fragment
-        android:id="@+id/listFragment"
-        android:name="com.skillbox.contentProvider.ui.list.ListFragment"
-        android:label="Список контактов"
-        tools:layout="@layout/fragment_list">
+        android:id="@+id/userListFragment"
+        android:name="com.skillbox.roomdao.ui.user.list.UserListFragment"
+        android:label="Список пользователей"
+        tools:layout="@layout/fragment_add_fab">
         <action
-            android:id="@+id/action_listFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            android:id="@+id/action_userListFragment_to_userAddFragment"
+            app:destination="@id/userAddFragment" />
         <action
-            android:id="@+id/action_listFragment_to_addFragment"
-            app:destination="@id/addFragment" />
+            android:id="@+id/action_userListFragment_to_emailAddressListFragment"
+            app:destination="@id/emailAddressListFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.skillbox.contentProvider.ui.detail.DetailFragment"
-        android:label="Просмотр контакта"
-        tools:layout="@layout/fragment_detail">
+        android:id="@+id/userAddFragment"
+        android:name="com.skillbox.roomdao.ui.user.add.UserAddFragment"
+        tools:layout="@layout/fragment_add_user">
         <argument
-            android:name="partialContact"
-            app:argType="com.skillbox.contentProvider.data.PartialContact" />
+            android:name="user"
+            app:argType="com.skillbox.roomdao.model.user.User" />
     </fragment>
 
     <fragment
-        android:id="@+id/addFragment"
-        android:name="com.skillbox.contentProvider.ui.add.AddFragment"
-        android:label="Добавление контакта"
-        tools:layout="@layout/fragment_add"/>
+        android:id="@+id/emailAddressListFragment"
+        android:name="com.skillbox.roomdao.ui.email_address.list.EmailAddressListFragment"
+        android:label="Список email адресов пользователя"
+        tools:layout="@layout/fragment_add_fab">
+        <argument
+            android:name="user"
+            app:argType="com.skillbox.roomdao.model.user.User" />
+        <action
+            android:id="@+id/action_emailAddressListFragment_to_emailAddressAddFragment"
+            app:destination="@id/emailAddressAddFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/emailAddressAddFragment"
+        android:name="com.skillbox.roomdao.ui.email_address.add.EmailAddressAddFragment"
+        tools:layout="@layout/fragment_add_email_address">
+        <argument
+            android:name="emailAddress"
+            app:argType="com.skillbox.roomdao.model.email_address.EmailAddress"/>
+    </fragment>
 
 </navigation>
